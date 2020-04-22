@@ -1,4 +1,5 @@
 
+
 samplePsi<-function(W,X,Psi,V,M,u1,loca,b,v){
   
   n=nrow(Psi)

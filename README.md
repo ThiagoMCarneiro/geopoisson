@@ -9,18 +9,14 @@
 status](https://travis-ci.com/ThiagoMCarneiro/GeoPoisson.svg?branch=master)](https://travis-ci.com/ThiagoMCarneiro/GeoPoisson)
 <!-- badges: end -->
 
-The goal of GeoPoisson is to …
+The goal of GeoPoisson is to find the estimates from the Non-homogeneous
+Poisson model in Morales et al. (2016) and make a interpolation map for
+a neighboring region.
 
 ## Installation
 
-You can install the released version of GeoPoisson from
-[CRAN](https://CRAN.R-project.org) with:
-
-``` r
-install.packages("GeoPoisson")
-```
-
-And the development version from [GitHub](https://github.com/) with:
+You can install the development version from
+[GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
@@ -29,33 +25,33 @@ devtools::install_github("ThiagoMCarneiro/GeoPoisson")
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+A short example of the application of the model:
 
-``` r
-library(GeoPoisson)
+Load the package:
+
+> library(GeoPoisson)
+
+Download the txt archives “X1.txt”, “dados1.txt”, and “loca1.txt” in
+data-raw folder.This data is made up by observations of 29 stations from
+1980 to 2010. This rainfall data (daily observations in milimeters) from
+ANA (Agência Nacional de Águas - National Water Agency).
+
+To find the parameters of the model:
+
+> require(mapproj) require(maptools) require(graphics) require(MASS)
+> require(Matrix) require(ggmap)
+
+> X\<-read.table(“X1.txt”,head=T)
+
+> data\<-read.table(“dados1.txt”,head=T)
+
+> loca\<-read.table(“loca1.txt”,head=T)
+
+> resultado \<- GeoPoisson(data,48.8,0.001,0.001,200000,150000,X,loca)
+
+> Interpolationgrid(resultado,loca,data,size=19,intensity=0.75)
+
 ## basic example code
-```
 
-What is special about using `README.Rmd` instead of just `README.md`?
-You can include R chunks like so:
-
-``` r
-summary(cars)
-#>      speed           dist       
-#>  Min.   : 4.0   Min.   :  2.00  
-#>  1st Qu.:12.0   1st Qu.: 26.00  
-#>  Median :15.0   Median : 36.00  
-#>  Mean   :15.4   Mean   : 42.98  
-#>  3rd Qu.:19.0   3rd Qu.: 56.00  
-#>  Max.   :25.0   Max.   :120.00
-```
-
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date.
-
-You can also embed plots, for example:
-
-<img src="man/figures/README-pressure-1.png" width="100%" />
-
-In that case, don’t forget to commit and push the resulting figure
-files, so they display on GitHub\!
+At the end of the code, one should get a table with estimates for the
+parameters and an Interpolationmap.
