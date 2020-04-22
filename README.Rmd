@@ -47,6 +47,13 @@ Download the txt archives "X1.txt", "dados1.txt", and "loca1.txt" in data-raw fo
 To find the parameters of the model:
 
 
+>install.packages("mapproj")
+
+>install.packages("maptools")
+
+>install.packages("graphics")
+
+>install.packages("ggmap")
 
 >require(mapproj)
 

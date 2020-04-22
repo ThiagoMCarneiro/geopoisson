@@ -38,6 +38,14 @@ ANA (Agência Nacional de Águas - National Water Agency).
 
 To find the parameters of the model:
 
+> install.packages(“mapproj”)
+
+> install.packages(“maptools”)
+
+> install.packages(“graphics”)
+
+> install.packages(“ggmap”)
+
 > require(mapproj)
 
 > require(maptools)
