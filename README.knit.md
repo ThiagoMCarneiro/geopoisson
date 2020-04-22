@@ -4,14 +4,7 @@ output: github_document
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-```{r, include = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>",
-  fig.path = "man/figures/README-",
-  out.width = "100%"
-)
-```
+
 
 # GeoPoisson
 
@@ -47,17 +40,15 @@ Download the txt archives "X1.txt", "dados1.txt", and "loca1.txt" in data-raw fo
 To find the parameters of the model:
 
 
-
+>install.packages("mapproj")
+>install.packages("maptools")
+>install.packages("graphics")
+>install.packages("ggmap")
 >require(mapproj)
-
 >require(maptools)
-
 >require(graphics)
-
 >require(MASS)
-
 >require(Matrix)
-
 >require(ggmap)
 
 

@@ -38,8 +38,17 @@ ANA (Agência Nacional de Águas - National Water Agency).
 
 To find the parameters of the model:
 
-> require(mapproj) require(maptools) require(graphics) require(MASS)
-> require(Matrix) require(ggmap)
+> require(mapproj)
+
+> require(maptools)
+
+> require(graphics)
+
+> require(MASS)
+
+> require(Matrix)
+
+> require(ggmap)
 
 > X\<-read.table(“X1.txt”,head=T)
 
