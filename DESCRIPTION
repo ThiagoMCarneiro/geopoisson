@@ -1,0 +1,20 @@
+Package: GeoPoisson
+Title: GeoPoisson package - estimation via MCMC of parameters and Interpolation map
+Version: 1.0
+Authors@R: 
+    c(person("Thiago","Carneiro", email="thiagomotacarneiro@hotmail.com",role=c("aut","cre")),
+      person("Fidel","Morales",email="Fidel_e_castro@hotmail.com",role=c("ctb")),
+      person("Antonio Hermes","Silva",email="hermes@ccet.ufrn.br",role=c("ctb")))
+Maintainer: Thiago Carneiro <thiagomotacarneiro@hotmail.com>          
+Description: This package estimates the parameter of the Non-homogeneous Poisson model from Morales et al. (2016) package. It also creates an Interpolation map from the observations.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.0
+Suggests: 
+    testthat
+
+
+
+
